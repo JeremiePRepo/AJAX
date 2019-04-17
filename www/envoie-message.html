@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const URL = "http://192.168.1.106:5000";
+
+        const request = new XMLHttpRequest();
+        request.open("POST", URL + "/send", true);
+        request.addEventListener(
+            "readystatechange",
+            function () {
+                if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
+                    console.log(request.status);
+                    console.log("Requête terminée avec succès");
+                    console.log(JSON.parse(request.responseText));
+                }
+            }
+        );
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        request.send("name=name&message=okokokokokk");
+    </script>
+</body>
+
+</html>

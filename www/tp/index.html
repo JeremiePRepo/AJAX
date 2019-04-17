@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <title>My Touiteur</title>
+</head>
+
+<body>
+  <header>
+    <h1>Touiteur</h1>
+    <p>A small useless subheader goes here !</p>
+  </header>
+  <form id="send_form">
+    <div class="container form-container">
+      <input type="text" id="name" placeholder="Votre nom" maxlength="16" class="form-item-name" />
+      <input type="text" id="message" placeholder="Votre message" maxlength="256" class="form-item-message" />
+      <input type="submit" value="Envoyer" />
+    </div>
+  </form>
+  <div class="container">
+    <p class="message" id="alerts"></p>
+  </div>
+  <div class="container touit-container" id="touit_container"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>

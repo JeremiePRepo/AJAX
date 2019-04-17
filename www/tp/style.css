@@ -1,0 +1,137 @@
+body {
+	background-color: #eee;
+	font-family: Consolas, monospace;
+}
+
+header {
+	margin: 20px;
+}
+
+header h1 {
+	color: #2a2a2a;
+	font-family: Helvetica, Consolas, monospace;
+	font-size: 4rem;
+	letter-spacing: 1.4rem;
+	margin: 0px;
+	text-align: center;
+}
+
+header p {
+	color: #828282;
+	margin: 0px;
+	text-align: center;
+}
+
+.container {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	margin: 40px;
+	padding: 20px;
+}
+
+.form-container {
+	align-items: stretch;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: stretch;
+}
+
+.form-container input {
+	border: 0px;
+	border-radius: 10px;
+	font-size: 1em;
+	margin: 0px 4px;
+	padding: 10px;
+}
+
+.form-container input[type=submit] {
+	background-color: #87ff52;
+	cursor: pointer;
+	
+	flex: 1;
+}
+
+.form-container input[type=submit]:hover {
+	background-color: #47df22;
+}
+
+.form-item-name {
+	flex: 1;
+}
+
+.form-item-message {
+	flex: 10;
+}
+
+.touit-container {
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.touit-item {
+	animation: touit-appear 2.5s 1;
+	box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.22);
+	color: #fff;
+	margin: 10px;
+	padding: 10px 40px;
+	position: relative;
+	transition: background-color 200ms, font-weight 1s, padding 300ms;
+}
+
+.touit-item:nth-child(3n+0) {
+	background-color: #205b85;
+}
+
+.touit-item:nth-child(3n+1) {
+	background-color: #5b8520;
+}
+
+.touit-item:nth-child(3n+2) {
+	background-color: #85205b;
+}
+
+.touit-item:hover {
+	background-color: #000;
+	color: #fff;
+	font-weight: bold;
+	padding: 30px 40px;
+}
+
+.touit-item p {
+	overflow: hidden;
+	padding-bottom: 10px;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+}
+
+.touit-item:hover p {
+	font-weight: bold;
+}
+
+.touit-item span {
+    bottom: 5px;
+	color: rgba(255, 255, 255, 0.4);
+	font-style: italic;
+	margin: 0px;
+    position:absolute;
+    right: 5px;
+	text-align: right;
+}
+
+/* Animations */
+@keyframes touit-appear {
+	from {
+		color: rgba(255, 255, 255, 0);
+		max-width: 0%;
+		opacity: 1;
+		white-space: nowrap;
+	}
+	to {
+		color: rgba(255, 255, 255, 1);
+		max-width: 100%;
+		opacity: 1;
+		white-space: normal;
+	}
+}

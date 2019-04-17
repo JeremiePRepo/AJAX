@@ -1,0 +1,15 @@
+﻿Fonctionnement de l'API :
+
+GET /list :
+	Retourne le timestamp ainsi que les messages envoyés
+
+GET /list?ts=[timestamp]
+	Retourne tous les messages envoyés depuis le timestamp [timestamp]
+
+POST /send
+	paramètres : name, message
+	Ajoute un message à la BDD s'il respecte les conditions :
+		- Les paramètres "name" et "messages" sont bien définis
+		- "name" fait entre 3 et 16 caractères
+		- "messages" fait entre 3 et 256 caractères
+	Retourne un objet "success" ou "error"
